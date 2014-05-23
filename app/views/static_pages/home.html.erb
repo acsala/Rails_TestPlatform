@@ -1,0 +1,100 @@
+<% if signed_in? %>
+  <div class="row">
+    <aside class="span4">
+      <section>
+        <%= render 'shared/user_info' %>
+      </section>
+      <section>
+        <%= render 'shared/stats' %>
+      </section>
+      <section>
+        <%= render 'shared/micropost_form' %>
+      </section>
+    </aside>
+    <div class="span8">
+      <h3>Micropost Feed</h3>
+      <%= render 'shared/feed' %>
+    </div>
+  </div>
+<% else %>
+
+    <div align="center" style="width:800px; margin:0 auto;" id="map-canvas"></div>
+    
+    <div style="margin-top: 10px;">
+      <label class="layer-wizard-search-label">
+        I'm looking for a hospital in
+        <input type="text" id="search-string_0">
+        <input type="button" onclick="changeMap_0()" value="Search">
+      </label> 
+    </div>
+    
+    <!-- Try out tables -->
+    <div align="center" style="width:800px; margin:0 auto;">
+    <table id="myTable" class="tablesorter"> 
+    <thead> 
+    <tr> 
+        <th>Last Name</th> 
+        <th>First Name</th> 
+        <th>Email</th> 
+        <th>Due</th> 
+        <th>Web Site</th> 
+    </tr> 
+    </thead> 
+    <tbody> 
+    <tr> 
+        <td>Smith</td> 
+        <td>John</td> 
+        <td>jsmith@gmail.com</td> 
+        <td>$50.00</td> 
+        <td>http://www.jsmith.com</td> 
+    </tr> 
+    <tr> 
+        <td>Bach</td> 
+        <td>Frank</td> 
+        <td>fbach@yahoo.com</td> 
+        <td>$50.00</td> 
+        <td>http://www.frank.com</td> 
+    </tr> 
+    <tr> 
+        <td>Doe</td> 
+        <td>Jason</td> 
+        <td>jdoe@hotmail.com</td> 
+        <td>$100.00</td> 
+        <td>http://www.jdoe.com</td> 
+    </tr> 
+    <tr> 
+        <td>Conway</td> 
+        <td>Tim</td> 
+        <td>tconway@earthlink.net</td> 
+        <td>$50.00</td> 
+        <td>http://www.timconway.com</td> 
+    </tr> 
+    </tbody> 
+    </table> 
+    </div>
+  <!--second map comment out
+
+  <div class="center">
+  <iframe width="500" height="300" scrolling="no" frameborder="no" src=
+  "https://www.google.com/fusiontables/embedviz?q=select+col12+from+1pBmIUohkhDjTOb3Mf9kCExXZiRSoez7yoVwbzd8&amp;viz=MAP&amp;h=false&amp;lat=52.09724575335805&amp;lng=5.258599000000004&amp;t=1&amp;z=8&amp;l=col12">
+  </iframe>
+  </div>
+  
+  -->
+  
+  <!--
+  <div class="center hero-unit">
+    <h1>Welcome to the Sample App</h1>
+
+    <h2>
+      This is the home page for the
+      <a href="http://railstutorial.org/">Ruby on Rails Tutorial</a>
+      sample application.
+    </h2>
+
+    <%= link_to "Sign up now!", signup_path,
+                                class: "btn btn-large btn-primary" %>
+  </div>
+  <%= link_to image_tag("rails.png", alt: "Rails"), 'http://rubyonrails.org/' %>
+   -->
+<% end %>
